@@ -875,7 +875,7 @@ button:hover {
     color: rgba(85, 85, 85, 0.82);
     height: 60px;
     width: 60px;
-    bottom: 20px;
+    bottom: 15px;
     right: 30px;
     cursor: pointer;
     display: none;
