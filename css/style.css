@@ -867,6 +867,16 @@ button:hover {
 
 /*button-back*/
 
+.button-back{
+    opacity: 0.6;
+    transition: .2s;
+    
+}
+
+.button-back:hover{
+    opacity: 1;
+}
+
 #upbutton {
     border: 3px solid rgba(85, 85, 85, 0.79);
     border-radius: 50%;
@@ -875,7 +885,7 @@ button:hover {
     color: rgba(85, 85, 85, 0.82);
     height: 60px;
     width: 60px;
-    bottom: 15px;
+    bottom: 55px;
     right: 30px;
     cursor: pointer;
     display: none;
