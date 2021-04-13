@@ -1,0 +1,143 @@
+@media (max-width: 1024px) {
+
+
+    h1 {
+        font-size: 64px;
+        padding-top: 20px;
+    }
+
+    .nav_menu .burger {
+        display: block;
+    }
+
+    .nav_menu > ul {
+        display: none;
+        position: absolute;
+        top: 110px;
+        right: 60px;
+    }
+
+    #check-burger:checked ~ ul {
+        display: flex;
+        flex-direction: column;
+        background: rgba(34, 34, 34, 0.77);
+    }
+
+    .nav_menu > ul > li {
+        margin: 5px 0;
+    }
+
+    .header > .wrap p {
+        font-size: 32px;
+    }
+
+    .nav_menu > ul > li:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .nav_menu > ul > li > a {
+        font-size: 14px;
+    }
+
+    /**********services**********/
+
+
+
+    .title {
+        padding: 80px 0 80px;
+    }
+
+
+    .services_advantages {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
+        padding: 0 0 80px;
+
+    }
+
+    /**********portfolio**********/
+
+    .galery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 25px;
+        padding: 0 0 80px;
+
+    }
+
+    /**********about**********/
+
+    .about > .wrap {
+        grid-gap: 50px;
+        padding: 0 0 80px;
+    }
+
+    .about > .wrap > .title {
+        padding-bottom: 30px;
+    }
+
+    .humble,
+    .startup,
+    .dark-days,
+    .triumph,
+    .story {
+        grid-column-gap: 25px;
+    }
+
+    .july-img:after {
+        width: 900px;
+        left: -218%;
+        top: 370%;
+    }
+
+    /**********ourteam**********/
+
+    .team {
+        grid-gap: 30px;
+    }
+
+    .ourteam > .wrap > p {
+        padding: 0 0 80px;
+    }
+
+    /**********logo**********/
+    .envato,
+    .wordpress,
+    .tuts,
+    .microlancer {
+        margin: 10px;
+    }
+
+    /**********contact**********/
+
+    .contact {
+        background-position: right bottom;
+        background-size: 55%;
+    }
+
+    .contact .title {
+        color: #fff;
+    }
+
+    .form {
+        grid-gap: 30px;
+        padding: 0 0 80px;
+    }
+
+    .form button {
+        margin: 10px auto 0;
+    }
+
+}
+
+
+@media (max-width: 768px) {}
+
+@media (max-width: 425px) {}
+
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
