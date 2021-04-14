@@ -1,30 +1,57 @@
 @media (max-width: 1024px) {
 
-
     h1 {
-        font-size: 64px;
+        font-size: calc(34px + 40 * ((100vw - 320px) / (1280 - 320)));
         padding-top: 20px;
     }
 
     .nav_menu .burger {
         display: block;
+        z-index: 1;
+    }
+
+    .nav_menu > ul > li > a {
+        font-weight: 600;
+    }
+
+    .nav_menu > ul > li > a:hover {
+        color: rgba(245, 110, 110, 0.83);
+    }
+
+    .nav_menu {
+        position: relative;
     }
 
     .nav_menu > ul {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
         position: absolute;
-        top: 110px;
-        right: 60px;
+        top: -150px;
+        right: -175px;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        opacity: 0;
+        transform: translateX(150px) translateY(110px)rotate(190deg);
+        transition: .8s;
     }
 
     #check-burger:checked ~ ul {
         display: flex;
         flex-direction: column;
-        background: rgba(34, 34, 34, 0.77);
+        align-items: center;
+        justify-content: flex-end;
+        background: rgba(21, 19, 15, 0.43);
+        opacity: 1;
+        transform: translateX(0)rotate(0deg);
+        transition: 1s;
     }
 
     .nav_menu > ul > li {
-        margin: 5px 0;
+        padding: 10px 0;
+
     }
 
     .header > .wrap p {
@@ -40,8 +67,6 @@
     }
 
     /**********services**********/
-
-
 
     .title {
         padding: 80px 0 80px;
@@ -131,13 +156,139 @@
 }
 
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
 
-@media (max-width: 425px) {}
+    .wrap {
+        width: 85%;
+    }
+
+    .nav_logo a {
+        font-size: 46px;
+    }
+
+    .nav_menu > ul > li > a {
+        font-size: 22px;
+    }
+
+    .nav_menu input:checked + .burger {
+        transform: rotate(90deg) translateX(-25px) translateY(15px);
+    }
+
+    .header {
+        padding: 50px 0 40px;
+        height: 600px;
+    }
+
+    .nav_menu > ul {
+        right: -160px;
+
+    }
 
 
-@media (max-width: 425px) {}
+    /**********services**********/
 
-@media (max-width: 375px) {}
+    .title {
+        padding: 40px 0 40px;
+    }
 
-@media (max-width: 320px) {}
+
+    .services_advantages {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 30px;
+        padding: 0 0 50px;
+
+    }
+
+    .advantages_commerce,
+    .advantages_responsive,
+    .advantages_security {
+        grid-row-gap: 20px;
+    }
+
+
+    /**********portfolio**********/
+
+    .galery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 25px;
+        padding: 0 0 80px;
+
+    }
+
+    /**********about**********/
+
+    .about > .wrap {
+        grid-gap: 50px;
+        padding: 0 0 80px;
+    }
+
+    .about > .wrap > .title {
+        padding-bottom: 30px;
+    }
+
+    .humble,
+    .startup,
+    .dark-days,
+    .triumph,
+    .story {
+        grid-column-gap: 25px;
+    }
+
+    .july-img:after {
+        width: 900px;
+        left: -218%;
+        top: 370%;
+    }
+
+    /**********ourteam**********/
+
+    .team {
+        grid-gap: 30px;
+    }
+
+    .ourteam > .wrap > p {
+        padding: 0 0 80px;
+    }
+
+    /**********logo**********/
+    .envato,
+    .wordpress,
+    .tuts,
+    .microlancer {
+        margin: 10px;
+    }
+
+    /**********contact**********/
+
+    .contact {
+        background-position: right bottom;
+        background-size: 55%;
+    }
+
+    .contact .title {
+        color: #fff;
+    }
+
+    .form {
+        grid-gap: 30px;
+        padding: 0 0 80px;
+    }
+
+    .form button {
+        margin: 10px auto 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}

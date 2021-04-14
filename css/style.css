@@ -8,6 +8,7 @@ body {
     font-family: 'Montserrat';
     color: #222222;
     box-sizing: border-box;
+
 }
 
 h1 {
@@ -36,12 +37,14 @@ h2 {
 .contact,
 .footer {
     width: 100%;
+    overflow: hidden;
 }
 
 .wrap {
     width: 80%;
     max-width: 1280px;
     margin: 0 auto;
+
 }
 
 .header {
@@ -107,6 +110,7 @@ h2 {
     font-size: 26px;
     color: #fed136;
     cursor: pointer;
+    line-height: 50%;
 }
 
 .nav_logo > a:hover {
@@ -136,16 +140,77 @@ h2 {
 
 .nav_menu .burger {
     display: none;
-    border: 0;
+    width: 50px;
+    height: 30px;
+    border: none;
     background: none;
     position: relative;
+    transform-origin: center;
+    transition: .8s;
 }
 
-.nav_menu .burger::before {
-    content: 'MENU';
-    color: rgba(255, 255, 255, 0.83);
-    font-size: 14px;
-    text-transform: uppercase;
+.nav_menu .burger:focus {
+    outline: none;
+}
+
+.nav_menu .burger:hover label span,
+.nav_menu .burger:hover label span:before,
+.nav_menu .burger:hover label span:after {
+    background: #fff;
+}
+
+label span,
+label span:before,
+label span:after {
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #fed136;
+    border-radius: 5px;
+    position: absolute;
+    top: calc(50% - 4px/2);
+    left: 0;
+    transition: transform .4s;
+}
+
+label span {
+    transition: width 1s;
+}
+
+label span:before {
+    content: '';
+    transform: translateY(-9px) rotate(0deg);
+    transform-origin: top right;
+}
+
+label span:after {
+    content: '';
+    transform: translateY(9px) rotate(0deg);
+    transform-origin: bottom right;
+}
+
+.nav_menu input:checked + .burger span:before {
+    transform: rotate(45deg);
+    background: rgba(245, 110, 110, 0.83);
+    width: 40px;
+    transform-origin: top right;
+}
+
+.nav_menu input:checked + .burger span {
+    width: 0;
+    transition: .8s;
+}
+
+.nav_menu input:checked + .burger span:after {
+    transform: rotate(-45deg);
+    background: rgba(245, 110, 110, 0.83);
+    width: 40px;
+    transform-origin: bottom right;
+}
+
+.nav_menu input:checked + .burger {
+    transform: rotate(90deg);
+    transition: 1s;
 }
 
 .burger label {
@@ -327,7 +392,7 @@ h2 {
 
 
 .galery__ebony > .bcg-block {
-    background: #222   url(../img/ebony.png)no-repeat;
+    background: #222 url(../img/ebony.png)no-repeat;
     background-blend-mode: normal;
     background-size: contain;
     background-position: center;
@@ -362,7 +427,7 @@ h2 {
 }
 
 .galery__burned > .bcg-block {
-    background:#7e6242 url(../img/burned.png)no-repeat;
+    background: #7e6242 url(../img/burned.png)no-repeat;
     background-blend-mode: normal;
     background-size: contain;
     background-position: center;
