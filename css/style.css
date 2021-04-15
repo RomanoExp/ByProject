@@ -265,6 +265,7 @@ label span:after {
     max-width: 300px;
     display: grid;
     grid-row-gap: 20px;
+    text-align: center;
     justify-items: center;
 }
 
@@ -885,14 +886,17 @@ label span:after {
 
 .name {
     grid-area: a;
+    height: 100%;
 }
 
 .email {
     grid-area: b;
+    height: 100%;
 }
 
 .subject {
     grid-area: c;
+    height: 100%;
 }
 
 .message {

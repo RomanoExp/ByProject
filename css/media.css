@@ -140,10 +140,6 @@
         background-size: 55%;
     }
 
-    .contact .title {
-        color: #fff;
-    }
-
     .form {
         grid-gap: 30px;
         padding: 0 0 80px;
@@ -191,12 +187,12 @@
         padding: 40px 0 40px;
     }
 
-
     .services_advantages {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 3fr);
         grid-template-rows: 1fr 1fr;
         grid-gap: 30px;
         padding: 0 0 50px;
+        justify-items: center;
 
     }
 
@@ -204,91 +200,161 @@
     .advantages_responsive,
     .advantages_security {
         grid-row-gap: 20px;
+
+    }
+
+    .advantages_commerce {
+        grid-column: 1/3;
+    }
+
+    .advantages_responsive {
+        grid-column: 3/5;
+    }
+
+
+    .advantages_security {
+        grid-column: 2/4;
     }
 
 
     /**********portfolio**********/
 
     .galery {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-gap: 25px;
-        padding: 0 0 80px;
+        padding: 0 0 50px;
 
     }
 
     /**********about**********/
 
     .about > .wrap {
-        grid-gap: 50px;
-        padding: 0 0 80px;
+        grid-row-gap: 50px;
+        padding: 0 0 50px;
+        justify-items: center;
     }
 
     .about > .wrap > .title {
-        padding-bottom: 30px;
+        padding-bottom: 20px;
+    }
+
+    .july-img:after {
+        width: 0;
+        height: 0;
     }
 
     .humble,
     .startup,
     .dark-days,
-    .triumph,
-    .story {
-        grid-column-gap: 25px;
+    .triumph {
+        grid-row-gap: 0;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
     }
 
-    .july-img:after {
-        width: 900px;
-        left: -218%;
-        top: 370%;
+    .july-block,
+    .december-block,
+    .january-block,
+    .february-block,
+    .story-img {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        text-align: left;
     }
 
-    /**********ourteam**********/
-
-    .team {
-        grid-gap: 30px;
+    .july-img,
+    .december-img,
+    .january-img,
+    .february-img {
+        grid-column: 1/2;
+        grid-row: 1/2;
     }
 
-    .ourteam > .wrap > p {
-        padding: 0 0 80px;
-    }
+}
 
-    /**********logo**********/
-    .envato,
-    .wordpress,
-    .tuts,
-    .microlancer {
-        margin: 10px;
-    }
+/**********ourteam**********/
 
-    /**********contact**********/
+.team {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 60px;
+    padding: 0 0 50px;
+}
 
-    .contact {
-        background-position: right bottom;
-        background-size: 55%;
-    }
+.team__marketer {
+    grid-column: 1/3;
 
-    .contact .title {
-        color: #fff;
-    }
+}
 
-    .form {
-        grid-gap: 30px;
-        padding: 0 0 80px;
-    }
+.team__coder {
+    grid-column: 3/5;
+}
 
-    .form button {
-        margin: 10px auto 0;
-    }
+.team__designer {
+    grid-column: 2/4;
+}
+
+.ourteam > .wrap > p {
+    padding: 0 0 40px;
+}
+
+/**********logo**********/
+.envato,
+.wordpress,
+.tuts,
+.microlancer {
+    margin: 0px;
+}
+
+.logos > .wrap {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+/**********contact**********/
+
+.contact {
+    background-size: 65%;
+}
+
+.form {
+    grid-gap: 20px;
+    padding: 0 0 40px;
+}
+
+/**********footer**********/
+
+.footer > .wrap {
+    background: #fff;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
 
 
+}
 
+.footer span {
+    color: #555555;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    grid-row: 2/3;
 
+}
 
-
-
-
-
-
+.footer-social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+}
 
 
 }
