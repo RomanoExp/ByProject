@@ -764,11 +764,6 @@ label span:after {
     padding: 0 0 120px;
 }
 
-.marketer-img:hover,
-.coder-img:hover,
-.designer-img:hover {}
-
-
 .team:hover .marketer-img,
 .team:hover .coder-img,
 .team:hover .designer-img {
@@ -804,9 +799,11 @@ label span:after {
         transform: translateY(0px);
 
     }
-
-    100% {
+    50% {
         transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
 
