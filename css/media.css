@@ -8,6 +8,7 @@
     .nav_menu .burger {
         display: block;
         z-index: 1;
+        cursor: pointer;
     }
 
     .nav_menu > ul > li > a {
@@ -269,92 +270,278 @@
         grid-row: 1/2;
     }
 
+    /**********ourteam**********/
+
+    .team {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 60px;
+        padding: 0 0 50px;
+    }
+
+    .team__marketer {
+        grid-column: 1/3;
+
+    }
+
+    .team__coder {
+        grid-column: 3/5;
+    }
+
+    .team__designer {
+        grid-column: 2/4;
+    }
+
+    .ourteam > .wrap > p {
+        padding: 0 0 40px;
+    }
+
+    /**********logo**********/
+    .envato,
+    .wordpress,
+    .tuts,
+    .microlancer {
+        margin: 0px;
+    }
+
+    .logos > .wrap {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        justify-items: center;
+        align-items: center;
+    }
+
+    /**********contact**********/
+
+    .contact {
+        background-size: 65%;
+    }
+
+    .form {
+        grid-gap: 20px;
+        padding: 0 0 40px;
+    }
+
+    /**********footer**********/
+
+    .footer > .wrap {
+        background: #fff;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+    }
+
+    .footer span {
+        color: #555555;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        grid-row: 2/3;
+
+    }
+
+    .footer-social {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+    }
+
 }
 
-/**********ourteam**********/
-
-.team {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 60px;
-    padding: 0 0 50px;
-}
-
-.team__marketer {
-    grid-column: 1/3;
-
-}
-
-.team__coder {
-    grid-column: 3/5;
-}
-
-.team__designer {
-    grid-column: 2/4;
-}
-
-.ourteam > .wrap > p {
-    padding: 0 0 40px;
-}
-
-/**********logo**********/
-.envato,
-.wordpress,
-.tuts,
-.microlancer {
-    margin: 0px;
-}
-
-.logos > .wrap {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-}
-
-/**********contact**********/
-
-.contact {
-    background-size: 65%;
-}
-
-.form {
-    grid-gap: 20px;
-    padding: 0 0 40px;
-}
-
-/**********footer**********/
-
-.footer > .wrap {
-    background: #fff;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
 
 
-}
+@media (max-width: 425px) {
 
-.footer span {
-    color: #555555;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    height: 50px;
-    grid-row: 2/3;
+    .wrap {
+        width: 95%;
+    }
 
-}
+    .nav_menu > ul {
+        right: -115px;
+    }
 
-.footer-social {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90px;
-}
+    .nav_menu input:checked + .burger {
+        transform: rotate(90deg) translateX(-15px) translateY(61px);
+    }
 
+    .header {
+        padding: 30px 0 20px;
+
+    }
+
+    /**********services**********/
+    .title {
+        padding: 35px 0 20px;
+    }
+
+    .title > p {
+        padding: 10px 0 0;
+    }
+
+    .services_advantages {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-row-gap: 30px;
+        padding: 0 0 30px;
+
+    }
+
+    .advantages_commerce,
+    .advantages_responsive,
+    .advantages_security {
+        grid-row-gap: 20px;
+
+    }
+
+    .advantages_commerce {
+        grid-column: 1/3;
+    }
+
+    .advantages_responsive {
+        grid-column: 1/3;
+    }
+
+
+    .advantages_security {
+        grid-column: 1/3;
+    }
+
+    /**********portfolio*********/
+
+    .galery {
+        padding: 0 0 30px;
+    }
+
+    .galery {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 0;
+        grid-row-gap: 25px;
+        padding: 0 0 30px;
+    }
+
+
+
+    /**********about*************/
+    .about > .wrap {
+        grid-row-gap: 50px;
+        padding: 0 0 30px;
+    }
+
+    .about > .wrap > .title {
+        padding: 35px 0 0;
+    }
+
+    .humble,
+    .startup,
+    .dark-days,
+    .triumph {
+        grid-row-gap: 5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .july-block,
+    .december-block,
+    .january-block,
+    .february-block,
+    .story-img {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        text-align: center;
+    }
+
+    .july-img,
+    .december-img,
+    .january-img,
+    .february-img {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+
+    /**********ourteam***********/
+
+    .team {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 50px;
+        padding: 0 0 30px;
+    }
+
+    .team__marketer {
+        grid-column: 1/2;
+
+    }
+
+    .team__coder {
+        grid-column: 1/2;
+    }
+
+    .team__designer {
+        grid-column: 1/2;
+    }
+
+    .team__marketer > span,
+    .team__coder > span,
+    .team__designer > span {
+        padding: 10px 0 5px;
+    }
+
+    .team__marketer > p,
+    .team__coder > p,
+    .team__designer > p {
+        padding: 0 0 10px;
+    }
+
+    /**********logo**************/
+
+    /**********contact***********/
+
+
+    .contact {
+        background-position: right top;
+        background-size: contain;
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+        grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d"
+            "e";
+        padding: 0 0 30px;
+    }
+
+    /**********footer************/
+
+    .footer-social {
+        height: 50px;
+    }
+
+
+    #upbutton {
+        bottom: 15px;
+        right: 15px;
+    }
 
 }
