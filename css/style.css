@@ -72,6 +72,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .header > .wrap {
@@ -1003,7 +1004,6 @@ label span:after {
 .button-back {
     opacity: 0.6;
     transition: .2s;
-
 }
 
 .button-back:hover {
